@@ -130,6 +130,6 @@ class GenerateCommitMessageAction : DumbAwareAction() {
     private companion object {
         val LOG = logger<GenerateCommitMessageAction>()
         val runningTasks = CopyOnWriteArrayList<RunningCommitUi>()
-        const val NOTIFICATION_GROUP = "AI Commit Message"
+        const val NOTIFICATION_GROUP = "AI Commit Composer"
     }
 }

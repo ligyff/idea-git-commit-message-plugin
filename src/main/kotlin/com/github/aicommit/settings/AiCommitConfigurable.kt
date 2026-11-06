@@ -11,7 +11,7 @@ import com.intellij.ui.dsl.builder.panel
 import javax.swing.JPasswordField
 
 class AiCommitConfigurable : BoundSearchableConfigurable(
-    "AI Commit Message",
+    "AI Commit Composer",
     "com.github.aicommit.settings",
 ) {
     private val settings = AiCommitSettings.getInstance()

@@ -1,13 +1,13 @@
 <idea-plugin>
     <id>com.github.aicommit.message</id>
-    <name>AI Commit Message</name>
+    <name>AI Commit Composer</name>
     <vendor email="ligy_coder@gmail.com"
             url="https://github.com/ligyff/idea-git-commit-message-plugin">ligyff</vendor>
     <description><![CDATA[
         Generates a Conventional Commit message from the changes included in the Commit tool window.
         <p>
         The message is written back into the commit message field for review. Use
-        <b>Settings | Tools | AI Commit Message</b> to configure any OpenAI-compatible endpoint.
+        <b>Settings | Tools | AI Commit Composer</b> to configure any OpenAI-compatible endpoint.
         Nothing is committed automatically.
         </p>
         <p>Highlights:</p>
@@ -35,8 +35,8 @@
                 parentId="tools"
                 instance="com.github.aicommit.settings.AiCommitConfigurable"
                 id="com.github.aicommit.settings"
-                displayName="AI Commit Message"/>
-        <notificationGroup id="AI Commit Message" displayType="BALLOON"/>
+                displayName="AI Commit Composer"/>
+        <notificationGroup id="AI Commit Composer" displayType="BALLOON"/>
     </extensions>
 
     <actions>
