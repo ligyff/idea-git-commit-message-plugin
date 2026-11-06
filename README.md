@@ -1,0 +1,1 @@
+# idea-git-commit-message-plugin
