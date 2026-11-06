@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.aicommit"
-version = "1.1.0"
+version = "1.2.0"
 
 kotlin {
     jvmToolchain(25)
@@ -24,8 +24,14 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "261"
-            untilBuild = "261.*"
+            untilBuild = "271.*"
         }
+    }
+
+    signing {
+        certificateChain = providers.environmentVariable("CERTIFICATE_CHAIN")
+        privateKey = providers.environmentVariable("PRIVATE_KEY")
+        password = providers.environmentVariable("PRIVATE_KEY_PASSWORD")
     }
 
     pluginVerification {

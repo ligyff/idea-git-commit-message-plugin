@@ -1,16 +1,27 @@
 <idea-plugin>
     <id>com.github.aicommit.message</id>
     <name>AI Commit Message</name>
-    <vendor>AI Commit Message contributors</vendor>
+    <vendor email="ligy_coder@gmail.com"
+            url="https://github.com/ligyff/idea-git-commit-message-plugin">ligyff</vendor>
     <description><![CDATA[
         Generates a Conventional Commit message from the changes included in the Commit tool window.
-        The message is written back for review; use Settings | Tools | AI Commit Message to configure
-        an OpenAI-compatible endpoint. Nothing is committed automatically.<br>
-        <br>
-        在 Commit 工具窗口中根据勾选的变更生成 Conventional Commits 提交信息。结果填回输入框，
-        由开发者确认后手动提交，不会自动提交。通过 Settings | Tools | AI Commit Message
-        配置 OpenAI 兼容的模型服务。
+        <p>
+        The message is written back into the commit message field for review. Use
+        <b>Settings | Tools | AI Commit Message</b> to configure any OpenAI-compatible endpoint.
+        Nothing is committed automatically.
+        </p>
+        <p>Highlights:</p>
+        <ul>
+            <li>Reads the changes actually included in the Commit tool window, not <code>git diff --cached</code></li>
+            <li>Supports partial changelist commits (per-block selections)</li>
+            <li>Falls back to the Responses API when <code>chat/completions</code> is unavailable</li>
+            <li>API key is stored in the IDE PasswordSafe; never written to config files or logs</li>
+        </ul>
     ]]></description>
+    <change-notes><![CDATA[
+        Initial release: generate Conventional Commit messages from included changes,
+        with dual-protocol support (chat/completions with automatic Responses API fallback).
+    ]]></change-notes>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.vcs</depends>
