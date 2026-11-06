@@ -1,4 +1,4 @@
-# AI Commit Message
+# AI Commit Composer
 
 [![CI](https://github.com/ligyff/idea-git-commit-message-plugin/actions/workflows/build.yml/badge.svg)](../../actions/workflows/build.yml)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
@@ -27,7 +27,7 @@ edit — nothing is ever committed automatically.
 
 ### Configuration
 
-`Settings → Tools → AI Commit Message`:
+`Settings → Tools → AI Commit Composer`:
 
 | Field | Description |
 |---|---|
@@ -97,7 +97,7 @@ IntelliJ IDEA 插件：在 Commit 工具窗口中根据勾选的变更生成提�
 
 ### 配置
 
-`Settings → Tools → AI Commit Message`：
+`Settings → Tools → AI Commit Composer`：
 
 | 项 | 说明 |
 |---|---|
