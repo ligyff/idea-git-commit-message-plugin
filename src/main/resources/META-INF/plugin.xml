@@ -5,7 +5,11 @@
     <description><![CDATA[
         Generates a Conventional Commit message from the changes included in the Commit tool window.
         The message is written back for review; use Settings | Tools | AI Commit Message to configure
-        an OpenAI-compatible endpoint. Nothing is committed automatically.
+        an OpenAI-compatible endpoint. Nothing is committed automatically.<br>
+        <br>
+        在 Commit 工具窗口中根据勾选的变更生成 Conventional Commits 提交信息。结果填回输入框，
+        由开发者确认后手动提交，不会自动提交。通过 Settings | Tools | AI Commit Message
+        配置 OpenAI 兼容的模型服务。
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
