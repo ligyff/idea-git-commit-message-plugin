@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.github.aicommit.message</id>
+    <name>AI Commit Message</name>
+    <vendor>AI Commit Message contributors</vendor>
+    <description><![CDATA[
+        Generates a Conventional Commit message from the changes included in the Commit tool window.
+        The message is written back for review; use Settings | Tools | AI Commit Message to configure
+        an OpenAI-compatible endpoint. Nothing is committed automatically.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+    <!-- Required at runtime: PartialChangesUtil (partial-block commits) ships with this plugin. -->
+    <depends>Git4Idea</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.github.aicommit.settings.AiCommitSettings"/>
+        <projectService serviceImplementation="com.github.aicommit.ai.OpenAiCompatibleClient"/>
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.github.aicommit.settings.AiCommitConfigurable"
+                id="com.github.aicommit.settings"
+                displayName="AI Commit Message"/>
+        <notificationGroup id="AI Commit Message" displayType="BALLOON"/>
+    </extensions>
+
+    <actions>
+        <action id="AICommitMessage.Generate"
+                class="com.github.aicommit.action.GenerateCommitMessageAction"
+                text="AI 生成提交信息"
+                description="根据勾选的变更生成提交信息"
+                icon="AllIcons.Actions.Edit">
+            <add-to-group group-id="Vcs.MessageActionGroup"
+                          anchor="after"
+                          relative-to-action="Vcs.ShowMessageHistory"/>
+        </action>
+    </actions>
+</idea-plugin>

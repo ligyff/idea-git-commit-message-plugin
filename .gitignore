@@ -1,0 +1,20 @@
+# Gradle / build output
+.gradle/
+.gradle-home/
+.kotlin/
+build/
+.tmp/
+
+# IntelliJ Platform Gradle Plugin caches, sandbox and downloaded IDE
+# (contains sandbox logs and machine-specific paths)
+.intellijPlatform/
+.idea/
+*.iml
+
+# Local agent scratch
+.superpowers/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
